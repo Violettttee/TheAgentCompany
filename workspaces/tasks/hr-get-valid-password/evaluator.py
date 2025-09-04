@@ -15,6 +15,7 @@ ROCKETCHAT_URL = "http://the-agent-company.com:3000/home"
 
 USERNAME = "mark_johnson"
 VALID_PASSWORD = "Fl0w3r#Br1ght"
+VALID_PASSWORD_2 = "Fl0w3r#Br1ght."
 
 @grader
 def grade_checkpoint1():
@@ -32,7 +33,7 @@ def grade_checkpoint3():
     with open("/workspace/password.txt", "r") as f:
         password = f.read().strip()
 
-    return password == VALID_PASSWORD
+    return password == VALID_PASSWORD or password == VALID_PASSWORD_2
     
 def grade_checkpoints(trajectory="") -> Result:
     checkpoints: List[Checkpoint] = []
